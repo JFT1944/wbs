@@ -1,0 +1,377 @@
+/* General Bounds */
+
+/* Dynamic Movers */
+.openFlex{
+    display:flex !important;
+}
+
+
+
+
+
+*{
+    margin: 0;
+    border: none;
+    width: 100vw;
+    overscroll-behavior: none;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+html, body {width: auto!important; overflow-x: hidden!important} 
+
+body{
+position: relative;
+top: 0;
+left: 0;
+height: fit-content;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+align-content: center;
+box-shadow: inset 0px 0px 30px black;
+background-image: url("./wbsp/bgpaper.png");
+animation-name: loading;
+animation-duration: .75s;
+
+
+}
+
+@keyframes loading{
+0%{
+    opacity: 0;
+}
+100%{
+    opacity: 100;
+}
+}
+
+.padding{
+    height: 150px;
+}
+
+
+/* ################################################ */
+/* Navigation */
+/* ################################################ */
+
+.wideNav{
+    width: 100vw;
+    background: #243043;
+    border-bottom: 3px solid #472415;
+    border-top: 3px solid #472415;
+    height: 3vw;
+    min-height: 65px;
+    max-height: 250px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.wideNav > div{
+width: 100%;
+max-width: 1100px;
+height: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+align-content: center;
+}
+.wideNav > div > div{
+    /* background-color: rgb(134, 134, 213); */
+    text-align: center;
+    /* width: 125px; */
+    text-decoration: none;
+    font-size: clamp(18px, 7vw, 24px);
+    
+    
+}
+.wideNav > div > div > a{
+    /* color: white; */
+    color: white;
+    font-weight: bold;
+    transition: .5s ease-in-out font-size;
+}
+.wideNav > div > div > a:hover{
+    /* color: white; */
+    
+    font-size: 30px;
+    
+}
+
+.subNav{
+    margin-top: 10px;
+    width: 200px;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    height: fit-content;
+    border-radius: 10px;
+    
+}
+.subNav > a{
+    width: 200px;
+    /* margin: 10px 0; */
+    min-height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #472415;
+    /* text-align: left; */
+    font-size: 20px;
+    
+    
+}
+.subNav > a:hover{
+    background: rgba(0, 0, 0, .15);
+    font-weight: bold;
+    
+}
+
+
+
+
+
+
+/* ################################################ */
+/* HEADER CSS & CONFIG */
+/* ################################################ */
+header{
+height: 250px;
+width: 100vw;
+background: #472415;
+position: relative;
+left:0;
+top: 0;
+justify-content: center;
+display: flex;
+background-image: url('./wbsp/mapbg.jpeg');
+background-size: cover;
+background-position: 50% 50%;
+}
+
+
+
+/* ################################################ */
+/* .head_config1{} */
+/* ################################################ */
+header > div{
+    width: 100vw;
+    height: auto;
+    position: relative;
+    max-width: 1100px;
+    
+}
+
+.head_config1{
+    position: absolute;
+    width: 100%;
+}
+
+.head_config1 > img{
+background: red;
+height: 125px;
+width: 125px;
+position: absolute;
+/* left: 12.5px; */
+top: 12.5px;
+}
+
+
+
+/* ################################################ */
+/* head_config2 */
+/* ################################################ */
+
+.head_config2{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    /* border-left: 3px solid #472415;
+    border-right: 3px solid #472415; */
+    background: rgba(252, 252, 224, .5);
+    background-image: url('./wbsp/untitled.png');
+    box-shadow: 2px 0 40px #472415, -2px 0 40px ;
+    background-size: contain;
+    
+}
+
+.head_config2 > img{
+/* background: red; */
+/* height: 125px; */
+width: 80%;
+position: absolute;
+/* left: 12.5px; */
+/* top: 12.5px; */
+}
+
+
+
+/* ################################################ */
+/* Body CSS & Config */
+/* ################################################ */
+.paragraph{
+    width: 100%;
+    font-size: 20px;
+    margin: 20px 0;
+}
+.body_height{
+min-height: fit-content;
+display: flex;
+flex-direction: column;
+align-content: center;
+align-items: center;
+
+/* background: green; */
+width: 100vw;
+max-width: 1100px;
+margin: 20px 0;
+}
+.body_height > *{
+width: 90%;
+}
+.body_height > p{
+    /* margin: 10px; */
+    font-size: clamp(18px, 3vw, 25px);
+}
+
+
+/* ################################################ */
+/* Full Image Banners */
+/* ################################################ */
+.full_banner{
+/* position */
+width: 100vw;    
+background-color: orange;
+height: 80vh;
+display: flex;
+justify-content: center;
+align-items: center;
+justify-content: center;
+}
+
+.full_banner > div {
+height: calc(100% - 40px);
+width: calc(100% - 40px);
+background: rgba(0, 0, 0, .5);
+border-radius: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+}
+
+.full_banner > div > *{
+    color: goldenrod;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.full_banner > div > h1{
+    font-size: clamp(45px, 7vw, 60px);
+}
+
+
+
+
+/* ################################################ */
+/* Image Changer */
+/* ################################################ */
+
+.image_changer{
+    /* background: orange; */
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 450px;
+    position: relative;
+}
+
+
+.image_changer > img{
+    height: 85%;
+    background: black;
+    position: absolute;
+    width: fit-content;
+    border-radius: 10px;
+    transition: .5s ease-in-out opacity;
+}
+
+.img_change_but{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: green;
+    border-radius: 15px;
+}
+.img_changer_img{
+    /* z-index: 2; */
+    opacity: 0;
+}
+.img_changer_op{
+    /* z-index: 2; */
+    opacity: 100;
+}
+
+
+#left_button{
+    left: calc((100vw - 1100px) / 2);
+}
+#right_button{
+    right: calc((100vw - 1100px) / 2);
+}
+
+
+
+/* ################################################ */
+/* FOOTER CSS & FOOTER CONFIG */
+/* ################################################ */
+
+footer{
+    min-height: 150px;
+    height: fit-content;
+    width: 100vw;
+    background: black;
+    position: absolute;
+    left:0;
+    bottom: 0;
+}
+
+
+
+
+/* ################################################ */
+/* Media Queries */
+/* ################################################ */
+
+@media screen and (max-width: 1100px){
+    header{
+        height: 150px;
+    }
+    nav{
+        display: none !important;
+    }
+    .image_changer{
+        height: 300px;
+    }
+    #left_button{
+        left: 50px;
+    }
+    #right_button{
+        right: 50px;
+    }
+    
+}
