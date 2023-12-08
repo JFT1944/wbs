@@ -141,7 +141,7 @@ align-content: center;
 /* HEADER CSS & CONFIG */
 /* ################################################ */
 header{
-height: 250px;
+height: 260px;
 width: 100vw;
 background: #472415;
 position: relative;
@@ -156,16 +156,19 @@ background-position: 50% 50%;
 
 
 
-/* ################################################ */
-/* .head_config1{} */
-/* ################################################ */
 header > div{
     width: 100vw;
     height: auto;
     position: relative;
     max-width: 1100px;
+    max-height: 250px;
+    top: 5px;
     
 }
+
+/* ################################################ */
+/* .head_config1{} */
+/* ################################################ */
 
 .head_config1{
     position: absolute;
@@ -191,18 +194,17 @@ top: 12.5px;
     position: absolute;
     width: 100%;
     display: flex;
+    border-radius: 5px;
     justify-content: center;
     height: 100%;
     align-items: center;
     align-content: center;
-    /* border-left: 3px solid #472415;
-    border-right: 3px solid #472415; */
     background: rgba(252, 252, 224, .5);
-    background-image: url('./wbsp/untitled.png');
-    box-shadow: 2px 0 40px #472415, -2px 0 40px ;
+    background-image: url('./wbsp_large/wil_back.png');
+    box-shadow: 0px 0 40px #472415, inset 0px 0 15px;
     background-size: contain;
-    
 }
+    
 
 .head_config2 > img{
 /* background: red; */
@@ -235,12 +237,28 @@ width: 100vw;
 max-width: 1100px;
 margin: 20px 0;
 }
+.body_height > h1{
+margin-top: 20px;
+}
 .body_height > *{
 width: 90%;
 }
 .body_height > p{
     /* margin: 10px; */
     font-size: clamp(18px, 3vw, 25px);
+}
+.body_height > ul > li{
+    /* margin: 10px; */
+    margin-bottom: 5px;
+    font-size: clamp(18px, 3vw, 25px);
+    width: 90%;
+}
+.body_height > p > img {
+    width:100%; 
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 5px;
+    
 }
 
 
@@ -301,6 +319,7 @@ flex-direction: column;
     width: 25vw;
     min-width: 300px;
     min-height: 300px;
+    margin: 0 10px;
 }
 .category{
     width: 100%;
@@ -363,6 +382,16 @@ flex-direction: column;
 #right_button{
     right: calc((100vw - 1100px) / 2);
 }
+
+
+
+/* ################################################ */
+/* Map Css*/
+/* ################################################ */
+
+gmp-map {
+    height: 100%;
+  }
 
 
 
