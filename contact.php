@@ -1,5 +1,8 @@
 <?php 
-$title = 'Contact' 
+$title = 'Contact';
+$bodybody = "<p>Wilson's Book World
+535 16th Street North
+St. Petersburg, FL 33704-2003</p>";
 
 ?>
 
@@ -9,8 +12,14 @@ $title = 'Contact'
 <body>
 <?php
 include("header.php");
-include("wide_nav.php");
+include("sideMenu.php");
 include("body.php");
+
+
+
+?>
+<div class="padding"></div>
+<?php
 include("footer.php");
 ?>
 

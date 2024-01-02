@@ -21,7 +21,8 @@ We are always buying a wide range of subject matter however we are especially se
 <li>Critical Theology</li>
 <li>Eastern Religions</li>
 <li>Children's Books</li>
-<li>Classics & LiteratureChess</li>
+<li>Classics & Literature</li>
+<li>Current Fiction</li>
 <li>Stage Magic & Illusion</li>
 <li>Historical & Theme Mysteries</li>
 <li>Martial Arts</li>
@@ -48,7 +49,7 @@ Fiction however, especially hard cover fiction is our most restrictive section a
 <body>
 <?php
 include("header.php");
-include("wide_nav.php");
+include("sideMenu.php");
 // include("banner_photo.php");
 include("body.php");
 // include('onlineOrdering.php');

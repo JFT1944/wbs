@@ -68,16 +68,21 @@ if($navDev){
 
 ?>
 
-<nav class="wideNav">
+<nav class="sideNav">
 <div>
 <?php
 foreach($navigation as $link){
     echo '<div class="topNav">';
-    echo '<a href="'.$link['link'].'">'.$link['title'].'</a>';
+    if($link['subArray'] == null){
+        echo '<a href="'.$link['link'].'">'.$link['title'].'</a>';    
+    }else{
+        echo '<a href="'.$link['link'].'">'.$link['title'].'</a> <span class="dropdownArrow">▶</span>';
+    }
+    
     if(!null){
      echo '<div class="subNav">';
     foreach($link['subArray'] as $subLink){
-     echo '<a href="'.$subLink['link'].'" class="subNavButton">'.$subLink['title'].'</a>';
+     echo '<a href="'.$subLink['link'].'" class="subNavButton">&#x2022; '.$subLink['title'].'</a>';
     }
     echo '</div>';
     }
@@ -87,40 +92,28 @@ foreach($navigation as $link){
 ?>
 </div>
 </nav>
+<script>
+for (let i of document.querySelectorAll('.dropdownArrow')){
+    i.addEventListener('click', function(){
+        // alert('clicked')
+        // console.log(i.parentElement.children[2])
+        if(i.innerText == '▶'){
+            i.innerText = '▼';
+        } else {
+            i.innerText = '▶';
+        }
+        i.parentElement.children[2].classList.toggle('openSubNav');
+        // document.querySelector().classList.toggle('openSubNav');
+    });
+}
+</script>
+<div class='sideNavButton'>
+
+</div>
 
 <script>
-for (let i of document.querySelectorAll('.topNav')){
-i.addEventListener('mouseenter', function(e){
-    console.log(e.target.classList);
-    if(document.querySelector('.openFlex')){
-        for(let i of document.querySelectorAll('.openFlex')){
-            i.classList.remove('openFlex');
-        }
-    }
-    if(e.target.classList.contains('topNav')){
-        e.target.querySelector('.subNav').classList.add('openFlex');
-    }
-})
-i.addEventListener('mouseleave', function(e){
-    // console.log({y:e.screenY});
-    // console.log({'y -test':e.target.offsetTop + e.target.offsetHeight});
-
-    console.log({data:e.offsetY});
-
-    if(e.offsetY <= 20 ){
-    e.target.querySelector('.subNav').classList.remove('openFlex');
-}
-})
-
-};
-for (let i of document.querySelectorAll('.subNav')){
-i.addEventListener('mouseleave', function(e){
-    // console.log(e.target.classList);
-    
-    document.querySelector('.openFlex').classList.remove('openFlex');}
-
-)
-
-};
-
+document.querySelector('.sideNavButton').addEventListener('click', function(){
+    document.querySelector('.sideNav').classList.toggle('sideNavFix');
+    // document.querySelector('.sideNavButton').classList.toggle('sideNavFix');
+});
 </script>

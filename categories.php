@@ -135,7 +135,7 @@ $categories = array(
 <body>
 <?php
 include("header.php");
-include("wide_nav.php");
+include("sideMenu.php");
 // include("banner_photo.php");
 include("body.php");
 // include('onlineOrdering.php');
